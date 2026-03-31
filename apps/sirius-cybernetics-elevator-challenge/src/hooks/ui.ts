@@ -112,3 +112,7 @@ export function useInput(isLoading: boolean) {
     }, [isLoading]);
     return { inputRef: ref };
 }
+
+// Re-export display mode hook for responsive layout
+export { useDisplayMode } from "./useDisplayMode";
+export type { DisplayMode } from "./useDisplayMode";

@@ -24,6 +24,32 @@ body {
   width: 100vw;
 }
 
+/* Responsive Display Modes */
+/* iframe mode (itch.io) - fixed 1280x720 for embedding */
+body.iframe-mode {
+  min-width: 1280px;
+  min-height: 720px;
+}
+
+body.iframe-mode #root {
+  min-width: 1280px;
+  min-height: 720px;
+  overflow: auto;
+}
+
+/* standalone mode (pollinations.ai) - full responsive */
+body.standalone-mode {
+  min-width: auto;
+  min-height: auto;
+}
+
+body.standalone-mode #root {
+  min-width: auto;
+  min-height: auto;
+  width: 100vw;
+  height: 100vh;
+}
+
 /* Ensure root container handles all scrolling */
 #root {
   height: 100vh;

@@ -19,6 +19,7 @@ import {
 import {
     AVAILABLE_MODELS,
     useBYOP,
+    useDisplayMode,
     useInput,
     useMessageScroll,
     useModelSelector,
@@ -26,6 +27,9 @@ import {
 import type { Message } from "@/types";
 
 export default function Index() {
+    // Initialize display mode for responsive layout (iframe vs standalone)
+    useDisplayMode();
+    
     const { messages, addMessage, setMessages } = useMessages();
     const gameState = useGameState(messages);
     const [inputPrompt, setInputPrompt] = useState("");
