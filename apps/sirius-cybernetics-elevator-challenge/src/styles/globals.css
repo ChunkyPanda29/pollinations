@@ -50,6 +50,97 @@ body.standalone-mode #root {
   height: 100vh;
 }
 
+/* Responsive Lottie Animations */
+/* iframe mode (itch.io) - fixed size for embedding */
+body.iframe-mode .floor-lottie-container,
+body.iframe-mode .floor-lottie-container > div {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+/* standalone mode (pollinations.ai) - responsive scaling */
+body.standalone-mode .floor-lottie-container,
+body.standalone-mode .floor-lottie-container > div {
+  width: 15vw !important;
+  height: 15vh !important;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/* Media queries for better responsiveness on small screens */
+@media (max-width: 768px) {
+  body.standalone-mode .floor-lottie-container,
+  body.standalone-mode .floor-lottie-container > div {
+    width: 25vw !important;
+    height: 25vh !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  body.standalone-mode .floor-lottie-container,
+  body.standalone-mode .floor-lottie-container > div {
+    width: 12vw !important;
+    height: 12vh !important;
+  }
+}
+
+/* Additional responsive fixes for flex/grid layouts with Lottie */
+.floor-lottie-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+body.iframe-mode .floor-lottie-wrapper {
+  width: 1280px;
+  height: 720px;
+}
+
+body.standalone-mode .floor-lottie-wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Responsive Lottie Animations */
+/* iframe mode: fixed size for itch.io embedding */
+body.iframe-mode .lottie-container,
+body.iframe-mode lottie-player {
+  width: 200px !important;
+  height: 200px !important;
+}
+
+/* standalone mode: responsive scaling */
+body.standalone-mode .lottie-container,
+body.standalone-mode lottie-player {
+  width: 15vw !important;
+  height: 15vh !important;
+  max-width: 300px;
+  max-height: 300px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+/* Media queries for better responsiveness on small screens */
+@media (max-width: 768px) {
+  body.standalone-mode .lottie-container,
+  body.standalone-mode lottie-player {
+    width: 25vw !important;
+    height: 25vh !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  body.standalone-mode .lottie-container,
+  body.standalone-mode lottie-player {
+    width: 12vw !important;
+    height: 12vh !important;
+  }
+}
+
 /* Ensure root container handles all scrolling */
 #root {
   height: 100vh;

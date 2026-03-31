@@ -116,3 +116,11 @@ export type LMMessage = {
 };
 
 export type SetState<T> = React.Dispatch<React.SetStateAction<T>>;
+
+// Animation Types
+export type AnimationMode = "lottie" | "png";
+
+// App Settings
+export type AppSettings = {
+    animationMode: AnimationMode;
+};
